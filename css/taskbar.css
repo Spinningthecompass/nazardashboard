@@ -1,0 +1,39 @@
+/* ===== Taskbar with Start button ===== */
+.xp-taskbar{ position:fixed; left:0; right:0; bottom:0; height:34px; z-index:500;
+  background:linear-gradient(180deg,#2a86ff 0%,#1560d6 8%,#0f4fc0 50%,#0d3fa0 92%,#0a3590 100%);
+  border-top:1px solid #5aa0ff; display:flex; align-items:center; padding:0 6px; gap:6px; }
+.xp-start-btn{ display:flex; align-items:center; gap:5px; height:26px; padding:0 10px 0 6px; border-radius:4px;
+  background:linear-gradient(180deg,#4ee85a 0%,#2fb23a 45%,#1f9a2c 55%,#2fb23a 100%);
+  border:1px solid #17811f; box-shadow:inset 0 1px 0 rgba(255,255,255,.5), 1px 1px 3px rgba(0,0,0,.4);
+  color:#fff; font-weight:800; font-style:italic; font-size:14px; text-shadow:1px 1px 1px rgba(0,0,0,.3); cursor:pointer; user-select:none; }
+.xp-start-btn:active{ background:linear-gradient(180deg,#2fb23a,#1f9a2c); box-shadow:inset 1px 1px 3px rgba(0,0,0,.4); }
+.xp-start-logo{ font-size:15px; }
+.xp-taskbar-sep{ width:1px; align-self:stretch; margin:5px 0; background:rgba(255,255,255,.25); box-shadow:1px 0 0 rgba(0,0,0,.2); }
+.xp-taskbar-item{ height:26px; padding:0 10px; border-radius:3px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25);
+  color:#fff; font-size:12px; display:flex; align-items:center; gap:6px; cursor:pointer; }
+.xp-taskbar-item:hover{ background:rgba(255,255,255,.2); }
+.xp-taskbar-clock{ margin-left:auto; color:#fff; font-size:11px; background:rgba(0,0,0,.15); padding:4px 10px; border-radius:3px; }
+
+/* ===== Start Menu popup ===== */
+.xp-startmenu{ position:fixed; left:4px; bottom:38px; width:380px; z-index:600; display:none;
+  background:#fff; border-radius:8px 8px 4px 4px; overflow:hidden;
+  box-shadow:2px 2px 14px rgba(0,0,0,.5); border:1px solid #0a3a9e; }
+.xp-startmenu.open{ display:block; }
+.xp-startmenu-header{ background:linear-gradient(180deg,#2a6fd6,#1955c7 40%,#0e44b8 100%); padding:8px 10px;
+  display:flex; align-items:center; gap:10px; }
+.xp-startmenu-avatar{ width:44px; height:44px; border-radius:5px; border:2px solid #fff; overflow:hidden;
+  background:#ffb703; display:flex; align-items:center; justify-content:center; font-size:24px; box-shadow:1px 1px 3px rgba(0,0,0,.5); }
+.xp-startmenu-username{ color:#fff; font-weight:700; font-size:15px; text-shadow:1px 1px 1px rgba(0,0,0,.3); }
+.xp-startmenu-body{ display:flex; min-height:280px; }
+.xp-startmenu-left{ flex:1; background:#fff; padding:6px 0; }
+.xp-startmenu-right{ flex:1; background:linear-gradient(180deg,#dde9fa,#c6dbf7); padding:6px 0; border-left:1px solid #a9c3e8; }
+.xp-startmenu-item{ display:flex; align-items:center; gap:9px; padding:6px 12px; cursor:pointer; font-size:12.5px; color:#1a1a1a; }
+.xp-startmenu-item:hover{ background:linear-gradient(180deg,#3a7ce8,#2a5fd0); color:#fff; }
+.xp-startmenu-item .xp-sm-icon{ font-size:20px; width:24px; text-align:center; flex-shrink:0; }
+.xp-startmenu-item .xp-sm-icon img{ width:20px; height:20px; object-fit:contain; }
+.xp-startmenu-sep{ height:1px; background:#c7d7ee; margin:6px 10px; }
+.xp-startmenu-sep.left-sep{ background:#e2e2e2; }
+.xp-startmenu-footer{ background:linear-gradient(180deg,#2a6fd6,#1955c7 40%,#0e44b8 100%); padding:6px 10px; display:flex; justify-content:flex-end; gap:8px; }
+.xp-startmenu-footer-btn{ display:flex; align-items:center; gap:6px; color:#fff; font-size:12px; font-weight:600;
+  padding:4px 10px; border-radius:3px; cursor:pointer; }
+.xp-startmenu-footer-btn:hover{ background:rgba(255,255,255,.2); }

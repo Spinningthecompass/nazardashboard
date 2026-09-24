@@ -1,0 +1,15 @@
+/* ===== Desktop ===== */
+html, body{ height:100%; }
+body{ padding:0 !important; }
+.xp-desktop{ position:fixed; inset:0; background-image:url('../assets/img/wallpaper.jpg'); background-size:cover; background-position:center 65%;
+  display:flex; align-items:flex-start; justify-content:flex-start; padding:22px; }
+.xp-desktop-icon{ width:88px; text-align:center; cursor:pointer; user-select:none; padding:6px 4px; border-radius:3px; }
+.xp-desktop-icon:hover .xp-desktop-icon-img{ filter:brightness(1.15); }
+.xp-desktop-icon.selected{ background:rgba(49,106,197,.35); outline:1px dotted rgba(255,255,255,.6); }
+.xp-desktop-icon-img{ font-size:40px; line-height:1; filter:drop-shadow(1px 2px 2px rgba(0,0,0,.6)); }
+.xp-desktop-icon-img img{ width:48px; height:48px; object-fit:contain; filter:drop-shadow(1px 2px 2px rgba(0,0,0,.6)); }
+.xp-desktop-icon-label{ color:#fff; font-size:12px; font-weight:600; margin-top:4px; text-shadow:1px 1px 2px #000, 0 0 4px #000; }
+.xp-window{ display:none; }
+.xp-window.visible{ display:block; }
+.xp-desktop{ bottom:34px; }
+.xp-window{ margin-bottom:34px; }

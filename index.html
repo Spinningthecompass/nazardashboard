@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>True-IQ — Кампании и адсеты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/xp-skin.css">
+<link rel="stylesheet" href="css/desktop.css">
+<link rel="stylesheet" href="css/taskbar.css">
+<link rel="stylesheet" href="css/windows.css">
+<link rel="stylesheet" href="css/views.css">
+<link rel="stylesheet" href="css/manuals.css">
+</head>
+<body>
+<div class="xp-desktop" id="xp-desktop">
+  <div class="xp-desktop-icon" id="xp-desktop-icon">
+    <div class="xp-desktop-icon-img"><img data-ico="computer" alt="Мой Трафик"></div>
+    <div class="xp-desktop-icon-label">Мой Трафик</div>
+  </div>
+  <div class="xp-desktop-icon" id="xp-desktop-search-icon">
+    <div class="xp-desktop-icon-img"><img data-ico="folder" alt="Поиск"></div>
+    <div class="xp-desktop-icon-label">Поиск</div>
+  </div>
+  <div class="xp-desktop-icon" id="xp-desktop-perf-icon">
+    <div class="xp-desktop-icon-img"><img data-ico="folder" alt="Performers"></div>
+    <div class="xp-desktop-icon-label">Performers</div>
+  </div>
+  <div class="xp-desktop-icon" id="xp-desktop-geo-icon">
+    <div class="xp-desktop-icon-img"><img data-ico="folder" alt="CW Performance Report"></div>
+    <div class="xp-desktop-icon-label">CW Performance<br>Report</div>
+  </div>
+  <div class="xp-desktop-icon" id="xp-desktop-man-icon">
+    <div class="xp-desktop-icon-img"><img data-ico="folder" alt="Мануалы"></div>
+    <div class="xp-desktop-icon-label">Мануалы</div>
+  </div>
+  <div class="xp-desktop-icon" id="xp-desktop-scheme-icon">
+    <div class="xp-desktop-icon-img"><img data-ico="folder" alt="Схема Аккаунтов"></div>
+    <div class="xp-desktop-icon-label">Схема Аккаунтов</div>
+  </div>
+</div>
+<div class="xp-window" id="xp-window">
+  <div class="xp-titlebar">
+    <div class="xp-title-left">Мой Трафик — True-IQ / Get-IQ</div>
+    <div class="xp-btns">
+      <div class="xp-btn" id="xp-min-btn" title="Свернуть панель">_</div>
+      <div class="xp-btn">□</div>
+      <div class="xp-btn close" id="xp-close-btn" title="Закрыть">×</div>
+    </div>
+  </div>
+  <div class="xp-menubar"><span>Файл</span><span>Правка</span><span>Вид</span><span>Избранное</span><span>Сервис</span><span>Справка</span></div>
+  <div class="xp-toolbar">
+    <button class="xp-toolbtn xp-back-btn" id="xp-nav-traffic">
+      <span class="xp-back-icon">&#11013;&#65039;</span>
+      <span>Назад</span>
+      <span class="xp-back-caret">&#9662;</span>
+    </button>
+    <span style="color:#c5c2a8;">|</span>
+    <span style="font-size:12px; color:#444;" id="xp-breadcrumb">Мой Трафик</span>
+  </div>
+  <div class="xp-addressbar">📍 Адрес: <b id="xp-address">C:\Трафик\</b></div>
+<div class="app">
+  <div class="sidebar collapsed" id="sidebar-el">
+    <p class="sub" style="margin-top:2px;" id="sync-stamp"></p>
+    <div id="camp-list"></div>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <h2 class="campaign-title" id="campaign-title">—<span class="campaign-badge" id="campaign-badge"></span></h2>
+      <span id="back-to-winners"></span>
+    </div>
+    <div class="tabbar" id="tabbar"></div>
+    <div id="content"></div>
+  </div>
+</div>
+<div class="xp-statusbar"><span id="xp-status-left">Готово</span><span>True-IQ Explorer v1.0</span></div>
+</div>
+
+<div class="xp-startmenu" id="xp-startmenu">
+  <div class="xp-startmenu-header">
+    <div class="xp-startmenu-avatar">&#128100;</div>
+    <div class="xp-startmenu-username">Media Buyer</div>
+  </div>
+  <div class="xp-startmenu-body">
+    <div class="xp-startmenu-left">
+      <div class="xp-startmenu-item" data-sm-action="open-window">
+        <span class="xp-sm-icon"><img data-ico="computer"></span>
+        <span><b>Мой Трафик</b></span>
+      </div>
+      <div class="xp-startmenu-sep left-sep"></div>
+      <div class="xp-startmenu-item" data-sm-action="winners">
+        <span class="xp-sm-icon">&#127942;</span>
+        <span>Performers</span>
+      </div>
+      <div class="xp-startmenu-item" data-sm-action="manuals">
+        <span class="xp-sm-icon">&#128218;</span>
+        <span>Мануалы</span>
+      </div>
+      <div class="xp-startmenu-item" data-sm-action="accounts">
+        <span class="xp-sm-icon">&#127963;&#65039;</span>
+        <span>Агентства</span>
+      </div>
+    </div>
+    <div class="xp-startmenu-right">
+      <div class="xp-startmenu-item" data-sm-action="tree">
+        <span class="xp-sm-icon">&#128451;&#65039;</span>
+        <span>Структура диска</span>
+      </div>
+      <div class="xp-startmenu-item" data-sm-action="home">
+        <span class="xp-sm-icon">&#127760;</span>
+        <span>На главную</span>
+      </div>
+      <div class="xp-startmenu-sep"></div>
+      <div class="xp-startmenu-item" data-sm-action="search">
+        <span class="xp-sm-icon">&#128269;</span>
+        <span>Поиск</span>
+      </div>
+    </div>
+  </div>
+  <div class="xp-startmenu-footer">
+    <div class="xp-startmenu-footer-btn" data-sm-action="logoff">&#128274; Выход</div>
+  </div>
+</div>
+
+<div class="xp-search-window" id="xp-search-panel">
+  <div class="xp-search-header">
+    <span>&#128269; Поиск</span>
+    <div class="xp-search-header-btns">
+      <span class="xp-search-header-btn" id="xp-search-minimize" title="Свернуть">_</span>
+      <span class="xp-search-header-btn" id="xp-search-maximize" title="Во весь экран">&#9723;</span>
+      <span class="xp-close-mini" id="xp-search-close">&#10005;</span>
+    </div>
+  </div>
+  <div class="xp-search-tabs">
+    <div class="xp-search-tab active" id="xp-search-tab-campaigns" data-search-view="campaigns">Кампании</div>
+    <div class="xp-search-tab" id="xp-search-tab-adsets" data-search-view="adsets">Адсеты</div>
+    <div class="xp-search-tab" id="xp-search-tab-creatives" data-search-view="creatives">Креативы</div>
+  </div>
+  <div class="xp-search-box">
+    <input type="text" class="xp-search-input" id="xp-search-input" placeholder="Введите название...">
+    <label class="bt-check oa-check" id="xp-search-oa-wrap"><input type="checkbox" id="xp-search-only-active"> только активные</label>
+  </div>
+  <div class="xp-search-table-wrap">
+    <table>
+      <thead><tr id="xp-search-thead"></tr></thead>
+      <tbody id="xp-search-results"></tbody>
+    </table>
+  </div>
+  <div class="xp-search-statusbar" id="xp-search-statusbar">Готово</div>
+</div>
+<div class="xp-scheme-window" id="xp-scheme-window">
+  <div class="xp-search-header">
+    <span>&#128202; Схема Аккаунтов</span>
+    <div class="xp-search-header-btns">
+      <span class="xp-search-header-btn" id="xp-scheme-minimize" title="Свернуть">_</span>
+      <span class="xp-search-header-btn" id="xp-scheme-maximize" title="Во весь экран">&#9723;</span>
+      <span class="xp-close-mini" id="xp-scheme-close">&#10005;</span>
+    </div>
+  </div>
+  <div class="xp-scheme-toolbar">
+    <button id="xp-scheme-zoom-out">&#8722;</button>
+    <span class="zoom-level" id="xp-scheme-zoom-level">100%</span>
+    <button id="xp-scheme-zoom-in">&#43;</button>
+    <button id="xp-scheme-zoom-reset">Сбросить вид</button>
+    <span style="margin-left:12px; display:inline-flex; align-items:center; gap:5px; font-size:11px; color:#444;">
+      <span style="display:inline-block; width:11px; height:11px; border-radius:3px; background:#eef3ea; border:1px solid #b9c7ac;"></span>только в этом кабинете
+      <span style="display:inline-block; width:11px; height:11px; border-radius:3px; background:#fff3d9; border:1px solid #d9a441; margin-left:8px;"></span>крутится и в других (перезапуск винера)
+    </span>
+    <span style="margin-left:auto; font-size:11px; color:#666;">± на карточке — свернуть/развернуть · колесо — зум</span>
+  </div>
+  <div class="xp-scheme-canvas-wrap" id="xp-scheme-canvas-wrap">
+    <div class="xp-scheme-canvas" id="xp-scheme-canvas"></div>
+  </div>
+</div>
+<div class="xp-scheme-window xp-perf-window" id="xp-perf-window">
+  <div class="xp-search-header">
+    <span>🏆 Performers</span>
+    <div class="xp-search-header-btns">
+      <span class="xp-search-header-btn" id="xp-perf-minimize" title="Свернуть">_</span>
+      <span class="xp-search-header-btn" id="xp-perf-maximize" title="Во весь экран">&#9723;</span>
+      <span class="xp-close-mini" id="xp-perf-close">&#10005;</span>
+    </div>
+  </div>
+  <div class="xp-perf-body" id="xp-perf-body"></div>
+</div>
+<div class="xp-scheme-window xp-perf-window" id="xp-geo-window">
+  <div class="xp-search-header">
+    <span>🌍 CW Performance Report</span>
+    <div class="xp-search-header-btns">
+      <span class="xp-search-header-btn" id="xp-geo-minimize">_</span>
+      <span class="xp-search-header-btn" id="xp-geo-maximize">&#9723;</span>
+      <span class="xp-close-mini" id="xp-geo-close">&#10005;</span>
+    </div>
+  </div>
+  <div class="xp-perf-body" id="xp-geo-body"></div>
+</div>
+<div class="xp-scheme-window xp-perf-window" id="xp-man-window">
+  <div class="xp-search-header">
+    <span id="xp-man-title">📚 Мануалы</span>
+    <div class="xp-search-header-btns">
+      <span class="xp-search-header-btn" id="xp-man-minimize">_</span>
+      <span class="xp-search-header-btn" id="xp-man-maximize">&#9723;</span>
+      <span class="xp-close-mini" id="xp-man-close">&#10005;</span>
+    </div>
+  </div>
+  <div class="xp-perf-body" id="xp-man-body"></div>
+</div>
+<div class="xp-taskbar">
+  <div class="xp-start-btn" id="xp-start-btn"><span class="xp-start-logo">&#8759;</span> start</div>
+  <div class="xp-taskbar-sep"></div>
+  <div class="xp-taskbar-item" id="xp-taskbar-window" style="display:none;">
+    <img data-ico="computer" style="width:16px; height:16px;"> Мой Трафик
+  </div>
+  <div class="xp-taskbar-item" id="xp-taskbar-search" style="display:none;">
+    <img data-ico="folder" style="width:16px; height:16px;"> Поиск
+  </div>
+  <div class="xp-taskbar-item" id="xp-taskbar-scheme" style="display:none;">
+    <img data-ico="folder" style="width:16px; height:16px;"> Схема Аккаунтов
+  </div>
+  <div class="xp-taskbar-item" id="xp-taskbar-perf" style="display:none;">🏆 Performers</div>
+  <div class="xp-taskbar-item" id="xp-taskbar-geo" style="display:none;">🌍 CW Performance Report</div>
+  <div class="xp-taskbar-item" id="xp-taskbar-man" style="display:none;">📚 Мануалы</div>
+  <div class="xp-taskbar-clock" id="xp-clock"></div>
+</div>
+
+<script src="data/sync-info.js"></script>
+<script src="data/campaigns.js"></script>
+<script src="data/accounts.js"></script>
+<script src="data/performers.js"></script>
+<script src="data/geo.js"></script>
+<script src="data/lifecycle.js"></script>
+<script src="data/rules.js"></script>
+<script src="data/funnel.js"></script>
+<script src="data/manuals.js"></script>
+<script src="js/core/icons.js"></script>
+<script src="js/core/constants.js"></script>
+<script src="js/lib/markdown.js"></script>
+<script src="js/views.js"></script>
+<script src="js/desktop/main-window.js"></script>
+<script src="js/desktop/start-menu.js"></script>
+<script src="js/windows/search.js"></script>
+<script src="js/windows/scheme.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
